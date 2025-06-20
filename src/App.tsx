@@ -1,14 +1,12 @@
-import type { Component } from 'solid-js';
-import MyComponent from "./study";
+import { Router, Route,  A } from "@solidjs/router";
+import Home from "./pages/Home";
+import Profile from "./pages/Profile";
 
-import styles from './App.module.css';
-
-const App: Component = () => {
+export default function App() {
   return (
-    <div class={styles.App}>
-      <MyComponent name="Solid" />
-    </div>
+    <>
+      <Route path="/" component={Home} />
+      <Route path="/profile" component={Profile} />
+    </>
   );
-};
-
-export default App;
+}
