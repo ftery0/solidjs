@@ -1,6 +1,7 @@
 import { A } from "@solidjs/router";
 import { user, setUser } from "../stores/user";
 import { createSignal, createEffect, createMemo } from "solid-js";
+import Nav from "../ui/nav";
 
 export default function Home() {
   
@@ -17,9 +18,7 @@ export default function Home() {
 
   return (
     <div>
-          <nav>
-        <A href="/">Home</A> | <A href="/profile">Profile</A>
-      </nav>
+        <Nav/>
       <h1>Home Page</h1>
 
       <div>
