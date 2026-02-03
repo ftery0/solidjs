@@ -1,0 +1,348 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
+}
+
+.article {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  overflow: hidden;
+}
+
+.header {
+  margin-bottom: var(--space-2xl);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: var(--space-2xl);
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: var(--space-lg);
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.meta {
+  display: flex;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.author,
+.date,
+.category {
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  margin-bottom: var(--space-2xl);
+}
+
+.body {
+  line-height: 1.8;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.body h2,
+.body h3,
+.body h4 {
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-md);
+}
+
+.body p {
+  margin-bottom: var(--space-lg);
+}
+
+.body code {
+  background-color: var(--bg-primary);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  color: var(--accent-secondary);
+  font-size: 0.9rem;
+}
+
+.body pre {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  overflow-x: auto;
+  margin-bottom: var(--space-lg);
+}
+
+.body pre code {
+  background-color: transparent;
+  padding: 0;
+  color: var(--text-primary);
+}
+
+.body a {
+  color: var(--accent-primary);
+  text-decoration: underline;
+}
+
+.body a:hover {
+  color: var(--accent-secondary);
+}
+
+.body ul,
+.body ol {
+  margin-left: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.body li {
+  margin-bottom: var(--space-sm);
+}
+
+.body blockquote {
+  border-left: 4px solid var(--accent-primary);
+  padding-left: var(--space-lg);
+  margin: var(--space-lg) 0;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.footer {
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--border-color);
+  margin-bottom: var(--space-xl);
+}
+
+.tags {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: var(--space-xs) var(--space-md);
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-md);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--border-color);
+}
+
+.editButton,
+.backButton {
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.editButton {
+  background-color: var(--accent-primary);
+  color: white;
+}
+
+.editButton:hover {
+  background-color: var(--accent-secondary);
+  transform: translateY(-2px);
+}
+
+.backButton {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.backButton:hover {
+  background-color: var(--border-color);
+}
+
+.commentsSection {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+}
+
+.commentsTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--space-xl);
+  color: var(--text-primary);
+}
+
+.commentForm {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+.formTitle {
+  font-size: 1.125rem;
+  margin-bottom: var(--space-lg);
+  color: var(--text-primary);
+}
+
+.formInput,
+.formTextarea {
+  width: 100%;
+  margin-bottom: var(--space-md);
+  padding: var(--space-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-family: var(--font-ui);
+  transition: var(--transition);
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.formInput:disabled,
+.formTextarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submitButton {
+  width: 100%;
+  padding: var(--space-md);
+  background-color: var(--accent-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: var(--accent-secondary);
+  transform: translateY(-2px);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.successMessage {
+  padding: var(--space-md) var(--space-lg);
+  background-color: var(--accent-success);
+  color: white;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-lg);
+  font-weight: 500;
+}
+
+.errorMessage {
+  padding: var(--space-md) var(--space-lg);
+  background-color: var(--accent-error);
+  color: white;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-lg);
+  font-weight: 500;
+}
+
+.commentsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.noComments {
+  text-align: center;
+  padding: var(--space-2xl);
+  color: var(--text-secondary);
+  background-color: var(--bg-primary);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-lg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .article {
+    padding: var(--space-lg);
+  }
+
+  .title {
+    font-size: 1.875rem;
+  }
+
+  .meta {
+    gap: var(--space-md);
+    font-size: 0.875rem;
+  }
+
+  .commentsSection {
+    padding: var(--space-lg);
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .editButton,
+  .backButton {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .article {
+    padding: var(--space-md);
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .header {
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-lg);
+  }
+
+  .body {
+    font-size: 0.95rem;
+  }
+
+  .meta {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .commentsSection {
+    padding: var(--space-md);
+  }
+
+  .commentForm {
+    padding: var(--space-md);
+  }
+}
